@@ -1,0 +1,41 @@
+
+/* Header */
+.app-header {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+
+.app-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+/* Content Area */
+.app-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Footer */
+.app-footer {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #ddd;
+}
+
+
+
+

@@ -1,0 +1,139 @@
+/* Global container */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #2b88d8, #34c197);
+    color: #fff;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    /* width: 60%; */
+    min-width: 80vw;
+}
+
+.signin-container{
+    min-width: 80vw;
+}
+
+.login-box {
+    display: flex;
+    width: 100%;
+    /* max-width: 1000px; */
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.otp-section, .info-section {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.otp-section {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 16px 0 0 16px;
+}
+
+.otp-section h2 {
+    margin-bottom: 40px;
+}
+
+.otp-input {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.otp-input::placeholder {
+    color: #ccc;
+}
+
+::placeholder {
+    color: rgb(137, 130, 130) !important;
+}
+
+.validate-btn {
+    /* background-color: #34c197; */
+    background: linear-gradient(to bottom, #41b341 0%, #0b370b 100%);
+    color: #fff;
+    padding: 12px 55px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.validate-btn:hover {
+    background-color: #28a481;
+}
+
+.resend-timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px 0 32px 0;
+    font-size: 14px;
+    padding: 0 40px;
+}
+
+.resend-link {
+    color: #34c197;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.otp-holder{
+    width: 70%;
+    margin: auto;
+}
+
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddd;
+}
+
+
+
+/* Resend OTP styles */
+.resend-otp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.resend-box {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.resend-otp-btn {
+    background-color: #34c197;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.resend-otp-btn:hover {
+    background-color: #28a481;
+}
