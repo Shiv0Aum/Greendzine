@@ -21,6 +21,9 @@ const Signin = () => {
         const newOtp = generateOtp(); // Generate a new OTP
         saveOtpToJson(newOtp); // Save OTP to a mock database or JSON file
 
+        // Store the email in local storage for use in Login.js
+        localStorage.setItem('userEmail', email);
+
         // Sending email using EmailJS
         const templateParams = {
             to_email: email,

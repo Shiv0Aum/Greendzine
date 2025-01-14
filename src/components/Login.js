@@ -27,13 +27,19 @@ const Login = () => {
         return () => clearTimeout(enableResendTimer);
     }, []);
 
-    // Function to send OTP to the email
     const sendOtp = () => {
+        const email = localStorage.getItem('userEmail'); // Retrieve the email from local storage
+        if (!email) {
+            setMessage('No email found. Please go back and enter your email.');
+            setMessageType('error');
+            return;
+        }
+
         const newOtp = generateOtp(); // Generate a new OTP
         saveOtpToJson(newOtp); // Save OTP to the mock database or JSON file
 
         const templateParams = {
-            to_email: 'user@example.com', // Replace with the user's email input
+            to_email: email,
             otp: newOtp,
         };
 
@@ -62,7 +68,6 @@ const Login = () => {
             });
     };
 
-    // Function to resend the OTP when the user clicks "Resend OTP"
     const handleResendOtp = () => {
         if (!otpExpiry) return; // Prevent resending if OTP is not yet allowed
         sendOtp(); // Resend OTP via email
@@ -70,7 +75,6 @@ const Login = () => {
         setMessageType('success');
     };
 
-    // Handle form submission (OTP validation)
     const handleSubmit = async (e) => {
         e.preventDefault();
         const storedOtp = await getOtpFromJson();
